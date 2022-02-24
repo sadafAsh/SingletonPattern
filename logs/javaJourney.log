@@ -1,8 +1,8 @@
-DEBUG [Thread-0] 2022-02-24T13:01:12,254  (line ) Instance ID: 1036207500
-DEBUG [Thread-0] 2022-02-24T13:01:12,256  (line ) [f, v, m, z, a, q, l, u, e, x, t, s, e, b, g, n, k, c, o, b, y, c, s, r, c, g, a, l, p, a, e, r, n, t, u, d, o, d, d, f, v, k, t, a, p, x, a, w]
-DEBUG [Thread-0] 2022-02-24T13:01:12,257  (line ) Player : [y, w, a, f, b, m, q, s]
-DEBUG [Thread-0] 2022-02-24T13:01:12,257  (line ) GOT TILES
-DEBUG [Thread-1] 2022-02-24T13:01:13,259  (line ) Instance ID: 297370105
-DEBUG [Thread-1] 2022-02-24T13:01:13,259  (line ) [c, s, x, b, c, l, f, w, p, t, f, n, l, r, f, e, t, s, b, k, g, p, x, c, y, u, q, e, s, d, n, y, r, z, e, b, v, a, k, v, a, a, o, w, u, d, q, a]
-DEBUG [Thread-1] 2022-02-24T13:01:13,259  (line ) Player : [o, g, d, a, t, m, a, m]
-DEBUG [Thread-1] 2022-02-24T13:01:13,259  (line ) GOT TILES
+DEBUG [Thread-0] 2022-02-24T21:01:11,195  (line ) Instance ID: 40722515
+DEBUG [Thread-0] 2022-02-24T21:01:11,197  (line ) [q, w, y, z, a, r, s, g, v, b, p, t, a, e, m, d, v, x, o, u, x, t, t, b, r, d, g, s, f, c, k, a, c, q, s, f, b, l, c, n, e, y, w, e, f, p, n, a]
+DEBUG [Thread-0] 2022-02-24T21:01:11,197  (line ) Player : [k, l, o, a, u, d, a, m]
+DEBUG [Thread-0] 2022-02-24T21:01:11,198  (line ) GOT TILES
+DEBUG [Thread-1] 2022-02-24T21:01:12,194  (line ) Instance ID: 1531569130
+DEBUG [Thread-1] 2022-02-24T21:01:12,194  (line ) [a, r, x, n, d, a, t, w, e, s, s, r, t, s, n, f, o, g, b, w, f, a, v, d, u, a, b, b, l, k, y, o, e, m, v, q, g, p, l, q, d, m, k, a, c, x, t, c]
+DEBUG [Thread-1] 2022-02-24T21:01:12,194  (line ) Player : [u, c, a, f, z, p, e, y]
+DEBUG [Thread-1] 2022-02-24T21:01:12,194  (line ) GOT TILES
