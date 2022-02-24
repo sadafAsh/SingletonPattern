@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'io.spring.dependency-management' version '1.0.1.RELEASE'
     id 'jacoco'
+    id "org.sonarqube" version "3.3"
 }
 
 group 'org.soj.designpattern.singleton'
@@ -13,22 +14,55 @@ repositories {
     mavenCentral()
 }
 test {
-    useJUnitPlatform()
-}
-
-test {
     finalizedBy jacocoTestReport // report is always generated after tests run
 }
 jacocoTestReport {
     dependsOn test // tests are required to run before generating the report
 }
 
+test {
+    useJUnitPlatform()
+}
+jacocoTestReport {
+    reports {
+        xml.enabled true
+    }
+}
+test.finalizedBy jacocoTestReport
+
+tasks.named('sonarqube').configure {
+    dependsOn test
+}
+sonarqube {
+    properties {
+        property "sonar.exclusions", "**/*ScrabbleThread.java"
+
+        property 'sonar.host.url', 'http://localhost:9000'
+        property 'sonar.login','c0aa40891849e67ef673d3b164472078f65fd37c'
+        property 'sonar.projectKey','SingleResponsibilityPrinciple'
+    }
+}
+
+jacocoTestReport {
+    dependsOn test // tests are required to run before generating the report
+
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: [
+                    "**/*ScrabbleThread*",
+                    "**/*Exception*"
+
+            ])
+        }))
+    }
+}
+
+
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    compile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.17.1'
     compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.17.1'
     compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.17.1'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.17.1'
     implementation group: 'com.lmax', name: 'disruptor', version: '3.+'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
-}
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'}

@@ -10,10 +10,10 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Singleton {
-    static final Logger logger= LogManager.getLogger(Singleton.class.getName());
+public class ScrabbleSingleton {
+    static final Logger logger= LogManager.getLogger(ScrabbleSingleton.class.getName());
 
-    private static Singleton firstInstance=null;
+    private static ScrabbleSingleton firstInstance=null;
 
     String[] scrabbleLetters={"a","a","a","a","a","a","b","b","b",
             "c","c","c","d","d","d","e","e","e","f","f","f","g","g",
@@ -23,16 +23,16 @@ public class Singleton {
     private LinkedList<String> letterList=new LinkedList<>(Arrays.asList(scrabbleLetters));
     static boolean firstThread=true;
 
-    private Singleton() {
-    }
-    public static synchronized Singleton getInstance(){
+
+
+    static synchronized ScrabbleSingleton getInstance(){
 
         if(firstInstance==null) {
             while (firstThread) {
                 firstThread = false;
                 Thread.currentThread();
                 try {
-                    Singleton.class.wait(1000);
+                    ScrabbleSingleton.class.wait(1000);
                 } catch (InterruptedException e) {
 
                     logger.log(Level.WARN,"Interrupted! ",e);
@@ -42,10 +42,10 @@ public class Singleton {
 
                 }
             }
-            synchronized (Singleton.class) {
+            synchronized (ScrabbleSingleton.class) {
 
 
-                firstInstance = new Singleton();
+                firstInstance = new ScrabbleSingleton();
 
             Collections.shuffle(firstInstance.letterList);
         }
@@ -55,6 +55,7 @@ public class Singleton {
     public List<String> getLetterList(){
         return firstInstance.letterList;
     }
+
     public List<String> getTiles(int howManyTiles){
         LinkedList<String> tilesToSend=new LinkedList<>();
         for (int i=0; i<=howManyTiles; i++){
