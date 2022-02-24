@@ -1,1 +1,8 @@
- INFO [main] 2022-02-06T21:29:28,774  (line ) hello
+DEBUG [Thread-0] 2022-02-24T13:01:12,254  (line ) Instance ID: 1036207500
+DEBUG [Thread-0] 2022-02-24T13:01:12,256  (line ) [f, v, m, z, a, q, l, u, e, x, t, s, e, b, g, n, k, c, o, b, y, c, s, r, c, g, a, l, p, a, e, r, n, t, u, d, o, d, d, f, v, k, t, a, p, x, a, w]
+DEBUG [Thread-0] 2022-02-24T13:01:12,257  (line ) Player : [y, w, a, f, b, m, q, s]
+DEBUG [Thread-0] 2022-02-24T13:01:12,257  (line ) GOT TILES
+DEBUG [Thread-1] 2022-02-24T13:01:13,259  (line ) Instance ID: 297370105
+DEBUG [Thread-1] 2022-02-24T13:01:13,259  (line ) [c, s, x, b, c, l, f, w, p, t, f, n, l, r, f, e, t, s, b, k, g, p, x, c, y, u, q, e, s, d, n, y, r, z, e, b, v, a, k, v, a, a, o, w, u, d, q, a]
+DEBUG [Thread-1] 2022-02-24T13:01:13,259  (line ) Player : [o, g, d, a, t, m, a, m]
+DEBUG [Thread-1] 2022-02-24T13:01:13,259  (line ) GOT TILES
