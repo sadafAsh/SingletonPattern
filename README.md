@@ -1,9 +1,20 @@
 # SingletonPattern
+      Singleton Pattern is one of the simplest design pattern in java.This type of pattern comes under
+creational pattern as this pattern provides one of the best way to create an object. 
+This pattern make sure that only single object is get created.
 
+       In this project,singleton pattern is used to getthe tiles of scrabble.
 
 JunitTest:
-      There is JUnit Test also present for all Single Responsiblity Principle  and test coverage are 100%
-successful by jacoco reports.
+
+ The  Junit Test is done of all the entities in  "Singleton Pattern" project and test coverage 
+is 100% successful in jacoco report.
+
+       
+  SONARQUBE :
+          In sonarqube,reliability ,security , securityReview and maintainability is A and 
+the code coverage is 100%. 
+
      
 SONARQUBE 
 
